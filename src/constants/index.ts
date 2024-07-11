@@ -19,10 +19,10 @@ export const menuList =[
         icon:ReceiptCent,
         path:"/expenses"
     },
-    {
-        id:4,
-        title:"Upgrade",
-        icon:ShieldCheck,
-        path:"/upgrade"
-    },
+    // {
+    //     id:4,
+    //     title:"Upgrade",
+    //     icon:ShieldCheck,
+    //     path:""
+    // },
 ]

@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   return (
     <div className='h-screen w-full p-5 border shadow-sm flex flex-col gap-6'>
-        <Image src="/logo.svg" alt='logo' width={160} height={100}  />
+        <Image src="/logo.svg" alt='logo' width={50} height={70}  />
 
         <div className='flex flex-col gap-4 mt-4'>
             {menuList.map((menu)=>(

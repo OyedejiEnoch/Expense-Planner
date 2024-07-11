@@ -10,8 +10,8 @@ const Header = () => {
   const {user, isSignedIn}=useUser()
 
   return (
-    <nav className='p-5 flex items-center justify-between border-b shadow'>
-         <Image src={"./logo.svg"} alt='logo' width={160} height={80} className='cursor-pointer' />
+    <nav className='p-5 max-w-[1300px] mx-auto flex items-center justify-between border-b shadow'>
+         <Image src={"./logo.svg"} alt='logo' width={60} height={80} className='cursor-pointer' />
 
          {isSignedIn ? 
          <UserButton />

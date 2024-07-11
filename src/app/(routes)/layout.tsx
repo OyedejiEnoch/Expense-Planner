@@ -6,8 +6,17 @@ import { db } from '@/utils/dbConfig'
 import { BudgetsSchema } from '@/utils/schema'
 import { useUser } from '@clerk/nextjs'
 import { eq } from 'drizzle-orm'
+import { Metadata } from 'next'
 import { useRouter } from 'next/navigation'
 import React, { ReactNode, useEffect } from 'react'
+
+ const metadata: Metadata = {
+  title: "Budget-planner",
+  description: "An application designed to help manage and keep track of your finances",
+  icons:{
+    icon:"/logo.svg"
+  }
+};
 
 const DashboardLayout = ({children}:{children:ReactNode}) => {
 
