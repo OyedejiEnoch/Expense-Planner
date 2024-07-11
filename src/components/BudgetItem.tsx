@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { TbCurrencyNaira } from "react-icons/tb";
 
 type Prop ={
     budgetItem:{
@@ -32,13 +33,13 @@ const BudgetItem = ({budgetItem}:Prop) => {
         
             </div>
 
-            <h2 className='font-bold text-primary text-lg'>${budgetItem.amount}</h2>
+            <h2 className='font-bold text-primary text-lg flex items-center '><TbCurrencyNaira size={20}/>{budgetItem.amount}</h2>
         </div>
 
         <div >
             <div className='flex justify-between items-center mb-3 px-4 py-2'>
                 <h2 className='text-sm text-slate-400'>{budgetItem.totalItem?budgetItem.totalItem  : 0} {budgetItem.totalItem === 1 ? "item" :"items"}</h2>
-                <h2 className='text-sm text-slate-400'>${budgetItem.amount-budgetItem.totalSpend} remaining</h2>
+                <h2 className='text-sm text-slate-400 flex items-center '><TbCurrencyNaira size={20} />{(budgetItem.amount-budgetItem.totalSpend).toLocaleString("en-us")} remaining</h2>
             </div>
 
             <div className='w-full bg-slate-300 h-4 rounded-full mb-5'>

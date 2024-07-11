@@ -4,6 +4,7 @@ import { eq } from 'drizzle-orm'
 import { Trash } from 'lucide-react'
 import React from 'react'
 import { toast } from 'sonner'
+import { TbCurrencyNaira } from "react-icons/tb";
 
 type Expense=[{
     id:string,
@@ -38,10 +39,10 @@ const ExpenseListTable = ({expensesList, refreshData}:{expensesList:any, refresh
             <h2 className='font-bold text-[18px]'>Action</h2>
         </div>
 
-        {expensesList.map((expense:any)=>(
-                <div className='grid grid-cols-4 bg-slate-100 mt-4'>
+        {expensesList.map((expense:any, index:any)=>(
+                <div key={index} className='grid grid-cols-4 bg-slate-100 mt-4'>
                 <p className='text-gray-500 text-[16px]'>{expense.name}</p>
-                <p className='text-gray-500 text-[16px]' >{expense.amount}</p>
+                <p className='text-gray-500 text-[16px] flex items-center' ><TbCurrencyNaira size={20}/>{expense.amount}</p>
                 <p className='text-gray-500 text-[16px]'>{expense.createdBy}</p>
                 <p className='text-gray-500 text-[16px]'>
                     <Trash className='text-red-500 text-[16px] cursor-pointer'size={20}

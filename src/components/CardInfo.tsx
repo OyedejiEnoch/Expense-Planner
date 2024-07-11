@@ -1,5 +1,6 @@
 import { PiggyBank, ReceiptText, Wallet } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
+import { TbCurrencyNaira } from 'react-icons/tb'
 
 const CardInfo = ({budgetList}:any) => {
 
@@ -34,7 +35,7 @@ const CardInfo = ({budgetList}:any) => {
       <div className='p-7 border flex rounded-lg items-center justify-between'>
             <div>
             <h2 className='text-sm'>Total Budget</h2>
-            <h2 className='font-bold text-2xl'>{totalBudget}</h2>   
+            <h2 className='font-bold text-2xl flex items-center'><TbCurrencyNaira size={20}/> {(totalBudget).toLocaleString("en-us")}</h2>   
             </div>
 
         <PiggyBank className='bg-primary p-3 h-12 w-12 rounded-full text-white'/>
@@ -44,7 +45,7 @@ const CardInfo = ({budgetList}:any) => {
         <div className='p-7 border flex rounded-lg items-center justify-between'>
             <div>
             <h2 className='text-sm'>Total Spend</h2>
-            <h2 className='font-bold text-2xl'>{totalSpend}</h2>   
+            <h2 className='font-bold text-2xl flex items-center'><TbCurrencyNaira size={20}/> {(totalSpend).toLocaleString("en-us")}</h2>   
             </div>
 
         <ReceiptText className='bg-primary p-3 h-12 w-12 rounded-full text-white'/>

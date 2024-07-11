@@ -23,7 +23,6 @@ import { useRouter } from 'next/navigation'
 
 const DialogBox = ({budgetId}:any) => {
   const router =useRouter()
-
   
   const deleteBudget =async()=>{
     // we want to firstly delete the expenses that are attached to the budget
@@ -46,8 +45,10 @@ const DialogBox = ({budgetId}:any) => {
 
   return (
 <AlertDialog>
-  <AlertDialogTrigger>
+  <AlertDialogTrigger asChild>
+  <div>
     <Button className="flex gap-2" variant={'destructive'} ><Trash /> Delete</Button>
+    </div>
   </AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogHeader>

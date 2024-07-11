@@ -5,7 +5,7 @@ const DashNavbar = () => {
   return (
     <div className='p-5 shadow-sm border-b flex justify-between items-center'>
         <div>
-            Search bar
+           
         </div>
 
         <div>

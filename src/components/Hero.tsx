@@ -1,8 +1,12 @@
+import { useUser } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const Hero = () => {
+
+  const {user}=useUser()
+
   return (
     <section className="bg-gray-50 flex items-center flex-col">
     <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex ">
@@ -19,9 +23,9 @@ const Hero = () => {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
             className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-            href="/sign-in"
+            href={user ? "/dashboard" : "/sign-in"}
           >
-            Get Started
+           {user ? " View Dashboard" : "Get Started"}
           </Link>
   
         </div>
