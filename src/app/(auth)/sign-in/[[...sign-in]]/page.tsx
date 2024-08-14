@@ -34,8 +34,7 @@ const SignInPage = () => {
         </h2>
 
         <p className="mt-4 leading-relaxed text-white/90">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-          quibusdam aperiam voluptatum.
+        An application designed to help manage your finances, plan your expenses, and control your budgets.
         </p>
       </div>
     </section>
