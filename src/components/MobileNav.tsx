@@ -29,7 +29,7 @@ const MobileNav = () => {
         <SheetClose asChild>
         <div className='flex flex-col gap-4 mt-4'>
             {menuList.map((menu)=>(
-                <SheetClose asChild>
+                <SheetClose key={menu.id} asChild>
                 <Link key={menu.id} href={menu.path} className={`flex gap-2 items-center text-gray-500 font-medium p-5 
                 cursor-pointer rounded-md hover:text-primary hover:bg-blue-300 transition-all
                  duration-150 ${path === menu.path && "text-primary bg-[#C3C2FF] "}`}>
