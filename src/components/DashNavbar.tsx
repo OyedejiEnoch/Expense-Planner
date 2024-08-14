@@ -6,8 +6,12 @@ import MobileNav from './MobileNav'
 const DashNavbar = () => {
   return (
     <div className='p-5 shadow-sm border-b flex justify-between items-center'>
-        
+      <div>
+
+        <div className='flex md:hidden'>
           <MobileNav />
+        </div>
+      </div>
         
 
         <div>
